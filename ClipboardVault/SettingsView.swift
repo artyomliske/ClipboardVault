@@ -1,3 +1,5 @@
+import AppKit
+import Carbon
 import Combine
 import ServiceManagement
 import SwiftUI
@@ -37,8 +39,66 @@ final class LaunchAtLoginManager: ObservableObject {
     }
 }
 
+struct HotKeyRecorderView: View {
+    @ObservedObject var hotKeyManager: GlobalHotKeyManager
+    @State private var isRecording = false
+    @State private var keyMonitor: Any?
+
+    var body: some View {
+        HStack(spacing: 10) {
+            Button {
+                isRecording.toggle()
+            } label: {
+                Text(isRecording ? "Нажмите сочетание…" : hotKeyManager.configuration.displayName)
+                    .monospacedDigit()
+                    .frame(minWidth: 110)
+            }
+            .buttonStyle(.bordered)
+
+            Button("Сбросить") {
+                hotKeyManager.resetToDefault()
+            }
+            .disabled(hotKeyManager.configuration == .default)
+        }
+        .onAppear {
+            installKeyMonitor()
+        }
+        .onDisappear {
+            removeKeyMonitor()
+        }
+    }
+
+    private func installKeyMonitor() {
+        guard keyMonitor == nil else { return }
+        keyMonitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
+            guard isRecording else { return event }
+
+            if event.keyCode == UInt16(kVK_Escape) {
+                isRecording = false
+                return nil
+            }
+
+            guard let configuration = HotKeyConfiguration.from(event: event) else {
+                NSSound.beep()
+                return nil
+            }
+
+            hotKeyManager.update(configuration)
+            isRecording = false
+            return nil
+        }
+    }
+
+    private func removeKeyMonitor() {
+        guard let keyMonitor else { return }
+        NSEvent.removeMonitor(keyMonitor)
+        self.keyMonitor = nil
+    }
+}
+
 struct SettingsView: View {
     @ObservedObject var store: ClipboardStore
+    @ObservedObject var hotKeyManager: GlobalHotKeyManager
     @StateObject private var launchAtLogin = LaunchAtLoginManager()
 
     var body: some View {
@@ -56,6 +116,22 @@ struct SettingsView: View {
                 Text("Лимит применяется одновременно к тексту и изображениям. Закреплённые записи не удаляются автоматически.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
+            }
+
+            Section("Горячая клавиша") {
+                LabeledContent("Открыть историю") {
+                    HotKeyRecorderView(hotKeyManager: hotKeyManager)
+                }
+
+                Text("Нажмите на сочетание, затем удерживайте хотя бы один модификатор (⌃, ⌥, ⇧ или ⌘) и нужную клавишу. Повторное нажатие открывает или скрывает окно истории.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+
+                if let errorMessage = hotKeyManager.errorMessage {
+                    Text(errorMessage)
+                        .font(.caption)
+                        .foregroundStyle(.red)
+                }
             }
 
             Section("Автозапуск") {
@@ -102,12 +178,12 @@ struct SettingsView: View {
             }
 
             Section("О приложении") {
-                LabeledContent("Версия", value: "1.2")
+                LabeledContent("Версия", value: "1.3")
                 LabeledContent("Формат истории", value: "JSON + локальные PNG")
             }
         }
         .formStyle(.grouped)
-        .frame(width: 500, height: 500)
+        .frame(width: 520, height: 590)
         .padding()
         .onAppear {
             launchAtLogin.refresh()

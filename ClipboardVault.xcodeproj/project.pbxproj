@@ -15,6 +15,7 @@
 		B00100000000000000000006 /* ClipboardMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000006 /* ClipboardMenuView.swift */; };
 		B00100000000000000000007 /* ClipboardRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000007 /* ClipboardRowView.swift */; };
 		B00100000000000000000008 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000008 /* SettingsView.swift */; };
+		B00100000000000000000009 /* GlobalHotKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000012 /* GlobalHotKeyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F00100000000000000000008 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		F00100000000000000000009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F00100000000000000000010 /* ClipboardVault.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClipboardVault.entitlements; sourceTree = "<group>"; };
+		F00100000000000000000012 /* GlobalHotKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHotKeyManager.swift; sourceTree = "<group>"; };
 		F00100000000000000000011 /* Clipboard Vault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clipboard Vault.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -61,6 +63,7 @@
 				F00100000000000000000006 /* ClipboardMenuView.swift */,
 				F00100000000000000000007 /* ClipboardRowView.swift */,
 				F00100000000000000000008 /* SettingsView.swift */,
+				F00100000000000000000012 /* GlobalHotKeyManager.swift */,
 				F00100000000000000000009 /* Info.plist */,
 				F00100000000000000000010 /* ClipboardVault.entitlements */,
 			);
@@ -151,6 +154,7 @@
 				B00100000000000000000006 /* ClipboardMenuView.swift in Sources */,
 				B00100000000000000000007 /* ClipboardRowView.swift in Sources */,
 				B00100000000000000000008 /* SettingsView.swift in Sources */,
+				B00100000000000000000009 /* GlobalHotKeyManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
