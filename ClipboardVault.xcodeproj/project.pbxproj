@@ -1,0 +1,271 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B00100000000000000000001 /* ClipboardVaultApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000001 /* ClipboardVaultApp.swift */; };
+		B00100000000000000000002 /* ClipboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000002 /* ClipboardItem.swift */; };
+		B00100000000000000000003 /* PasteboardMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000003 /* PasteboardMonitor.swift */; };
+		B00100000000000000000004 /* HistoryPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000004 /* HistoryPersistence.swift */; };
+		B00100000000000000000005 /* ClipboardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000005 /* ClipboardStore.swift */; };
+		B00100000000000000000006 /* ClipboardMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000006 /* ClipboardMenuView.swift */; };
+		B00100000000000000000007 /* ClipboardRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000007 /* ClipboardRowView.swift */; };
+		B00100000000000000000008 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00100000000000000000008 /* SettingsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F00100000000000000000001 /* ClipboardVaultApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardVaultApp.swift; sourceTree = "<group>"; };
+		F00100000000000000000002 /* ClipboardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardItem.swift; sourceTree = "<group>"; };
+		F00100000000000000000003 /* PasteboardMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardMonitor.swift; sourceTree = "<group>"; };
+		F00100000000000000000004 /* HistoryPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPersistence.swift; sourceTree = "<group>"; };
+		F00100000000000000000005 /* ClipboardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardStore.swift; sourceTree = "<group>"; };
+		F00100000000000000000006 /* ClipboardMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardMenuView.swift; sourceTree = "<group>"; };
+		F00100000000000000000007 /* ClipboardRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardRowView.swift; sourceTree = "<group>"; };
+		F00100000000000000000008 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		F00100000000000000000009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F00100000000000000000010 /* ClipboardVault.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClipboardVault.entitlements; sourceTree = "<group>"; };
+		F00100000000000000000011 /* Clipboard Vault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Clipboard Vault.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A00100000000000000000004 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A00100000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A00100000000000000000002 /* ClipboardVault */,
+				A00100000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A00100000000000000000002 /* ClipboardVault */ = {
+			isa = PBXGroup;
+			children = (
+				F00100000000000000000001 /* ClipboardVaultApp.swift */,
+				F00100000000000000000002 /* ClipboardItem.swift */,
+				F00100000000000000000003 /* PasteboardMonitor.swift */,
+				F00100000000000000000004 /* HistoryPersistence.swift */,
+				F00100000000000000000005 /* ClipboardStore.swift */,
+				F00100000000000000000006 /* ClipboardMenuView.swift */,
+				F00100000000000000000007 /* ClipboardRowView.swift */,
+				F00100000000000000000008 /* SettingsView.swift */,
+				F00100000000000000000009 /* Info.plist */,
+				F00100000000000000000010 /* ClipboardVault.entitlements */,
+			);
+			path = ClipboardVault;
+			sourceTree = "<group>";
+		};
+		A00100000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F00100000000000000000011 /* Clipboard Vault.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A00100000000000000000005 /* Clipboard Vault */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A00100000000000000000008 /* Build configuration list for PBXNativeTarget "Clipboard Vault" */;
+			buildPhases = (
+				A00100000000000000000006 /* Sources */,
+				A00100000000000000000004 /* Frameworks */,
+				A00100000000000000000007 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Clipboard Vault";
+			productName = ClipboardVault;
+			productReference = F00100000000000000000011 /* Clipboard Vault.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A00100000000000000000009 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A00100000000000000000005 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+				};
+			};
+			buildConfigurationList = A00100000000000000000010 /* Build configuration list for PBXProject "ClipboardVault" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A00100000000000000000001;
+			productRefGroup = A00100000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A00100000000000000000005 /* Clipboard Vault */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A00100000000000000000007 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A00100000000000000000006 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00100000000000000000001 /* ClipboardVaultApp.swift in Sources */,
+				B00100000000000000000002 /* ClipboardItem.swift in Sources */,
+				B00100000000000000000003 /* PasteboardMonitor.swift in Sources */,
+				B00100000000000000000004 /* HistoryPersistence.swift in Sources */,
+				B00100000000000000000005 /* ClipboardStore.swift in Sources */,
+				B00100000000000000000006 /* ClipboardMenuView.swift in Sources */,
+				B00100000000000000000007 /* ClipboardRowView.swift in Sources */,
+				B00100000000000000000008 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C00100000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C00100000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		C00100000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ClipboardVault/ClipboardVault.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ClipboardVault/Preview Content\"";
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ClipboardVault/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clipboardvault.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C00100000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ClipboardVault/ClipboardVault.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ClipboardVault/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clipboardvault.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = minimal;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A00100000000000000000008 /* Build configuration list for PBXNativeTarget "Clipboard Vault" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00100000000000000000003 /* Debug */,
+				C00100000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A00100000000000000000010 /* Build configuration list for PBXProject "ClipboardVault" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C00100000000000000000001 /* Debug */,
+				C00100000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A00100000000000000000009 /* Project object */;
+}
